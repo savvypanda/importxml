@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>Import XML</name>
+	<creationDate>November 2012</creationDate>
+	<author>Levi Carter</author>
+	<authorEmail>levi@mangotreemedia.com</authorEmail>
+	<authorUrl>http://www.mangotreemedia.com</authorUrl>
+	<copyright></copyright>
+	<license></license>
+	<version>0.9.93</version>
+	<description>The ImportXML component imports an XML file and uses it's contents to modify, add, or remove events from the JEvents component.</description>
+	
+	<installfile>install.importxml.php</installfile>
+	<scriptfile>script.importxml.php</scriptfile>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<media destination="com_importxml" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	
+	<!--files folder="site"> commenting this out since this component is an administrator-only component </files-->
+	<!--languages folder="admin">
+		<language tag="en-GB">language/en-GB/en-GB.com_importxml.ini</language>
+	</languages-->
+	
+	<administration>
+		<menu img="../media/com_importxml/images/importxml_16x16.png">Import XML</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>helper.php</filename>
+			<filename>importxml.php</filename>
+			<filename>index.html</filename>
+			<folder>upload</folder>
+			<folder>controllers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_importxml.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_importxml.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

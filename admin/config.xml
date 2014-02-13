@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="uploads" label="COM_IMPORTXML_CONFIG_UPLOADS_LABEL" description="COM_IMPORTXML_CONFIG_UPLOADS_DESCRIPTION">
+		<field name="cron_filename" type="text" label="COM_IMPORTXML_CONFIG_CRON_FILENAME_LABEL" descritpion="COM_IMPORTXML_CONFIG_CRON_FILENAME_DESCRIPTION" default="uploadfile.xml" />
+		<field name="archive_filename" type="text" label="COM_IMPORTXML_CONFIG_ARCHIVE_FILENAME_LABEL" description="COM_IMPORTXML_CONFIG_ARCHIVE_FILENAME_DESCRIPTION" default="{FILENAME_BASE}-{TIMESTAMP}.xml" />
+		<field name="archive_days" type="text" label="COM_IMPORTXML_CONFIG_ARCHIVE_DAYS_LABEL" description="COM_IMPORTXML_CONFIG_ARCHIVE_DAYS_DESCRIPTION" default="30" />
+		<field name="nofity_admin" type="radio" label="COM_IMPORTXML_CONFIG_NOTIFY_ADMIN_LABEL" description="COM_IMPORTXML_CONFIG_NOTIFY_ADMIN_DESCRIPTION" default="0">
+			<option value="0">COM_IMPORTXML_CONFIG_NOTIFY_ADMIN_NEVER</option>
+			<option value="1">COM_IMPORTXML_CONFIG_NOTIFY_ADMIN_ON_ERROR</option>
+			<option value="2">COM_IMPORTXML_CONFIG_NOTIFY_ADMIN_ALWAYS</option>
+		</field>
+		<field name="admin_emails" type="text" label="COM_IMPORTXML_CONFIG_ADMIN_EMAILS_LABEL" description="COM_IMPORTXML_CONFIG_ADMIN_EMAILS_DESCRIPTION" default="" />
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_importxml" section="component" />
+	</fieldset>
+</config>
